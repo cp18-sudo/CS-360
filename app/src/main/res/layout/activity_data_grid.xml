@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_screen_background"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Final UI polish: a clearer header helps the screen feel finished
+         while keeping the project focused on the capstone enhancements. -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/weight_history"
+        android:textColor="@color/text_primary"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/weight_history_subtitle"
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp" />
+
+    <!-- ============================================================
+         Trend Summary Card (Enhancement Two)
+
+         Displays rolling average, trend direction, weekly change,
+         and alerts above the entry list. Visibility is controlled
+         by DataGridActivity.updateTrendCard() based on whether
+         TrendCalculator has enough data to produce results.
+         ============================================================ -->
+    <LinearLayout
+        android:id="@+id/trendCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/trend_card_background"
+        android:orientation="vertical"
+        android:padding="14dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/trend_summary_title"
+            android:textColor="@color/text_primary"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <!-- Shown when not enough entries for analysis -->
+        <TextView
+            android:id="@+id/trendInsufficientText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <!-- 7-day rolling average -->
+        <TextView
+            android:id="@+id/trendAverageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <!-- Trend direction (Losing / Gaining / Stable) -->
+        <TextView
+            android:id="@+id/trendDirectionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <!-- Weekly change delta and percent -->
+        <TextView
+            android:id="@+id/trendWeeklyChangeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <!-- Alert message -->
+        <TextView
+            android:id="@+id/trendAlertText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/alert_warning"
+            android:textSize="13sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- Header row for the RecyclerView columns -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/header_row_background"
+        android:orientation="horizontal"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="@string/date_label"
+            android:textColor="@color/text_secondary"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="@string/weight_label"
+            android:textColor="@color/text_secondary"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/weightRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp"
+        android:scrollbars="vertical" />
+
+    <Button
+        android:id="@+id/addEntryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/primary_button_background"
+        android:minHeight="48dp"
+        android:text="@string/add_entry"
+        android:textColor="@color/white"
+        tools:ignore="VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/setGoalButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/secondary_button_background"
+        android:minHeight="48dp"
+        android:text="@string/set_goal"
+        android:textColor="@color/primary_green"
+        tools:ignore="VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/smsPermissionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/secondary_button_background"
+        android:minHeight="48dp"
+        android:text="@string/sms_permission"
+        android:textColor="@color/primary_green"
+        tools:ignore="VisualLintButtonSize" />
+
+</LinearLayout>

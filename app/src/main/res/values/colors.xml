@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Simple final-demo palette. These colors keep the UI cleaner
+         without making the school project look like a full redesign. -->
+    <color name="app_background">#F6F8F5</color>
+    <color name="surface_card">#FFFFFFFF</color>
+    <color name="surface_tint">#EEF5EF</color>
+    <color name="primary_green">#2E7D32</color>
+    <color name="primary_green_dark">#1B5E20</color>
+    <color name="accent_blue">#1565C0</color>
+    <color name="text_primary">#1F2933</color>
+    <color name="text_secondary">#52616B</color>
+    <color name="border_soft">#D6DEE2</color>
+    <color name="danger_red">#B00020</color>
+    <color name="alert_warning">#E65100</color>
+</resources>

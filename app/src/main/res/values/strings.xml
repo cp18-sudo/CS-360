@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">Weight Tracker</string>
+
+    <!-- Login screen -->
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="create_account">Create Account</string>
+    <string name="login_subtitle">Track daily weight and goal progress</string>
+
+    <!-- Data grid screen -->
+    <string name="weight_history">Weight History</string>
+    <string name="weight_history_subtitle">Review entries, set goals, and watch your trend.</string>
+    <string name="date_label">Date</string>
+    <string name="weight_label">Weight</string>
+    <string name="add_entry">Add Entry</string>
+    <string name="sms_permission">SMS Permission</string>
+    <string name="add_weight_title">Add Weight</string>
+    <string name="edit_weight_title">Edit Weight</string>
+    <string name="weight_hint">Enter weight (lbs)</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+
+    <!-- Goal notification (no SMS is actually sent; this is informational) -->
+    <string name="weight_goal_reached">Congratulations! You reached your goal weight.</string>
+
+    <!-- Login and registration feedback -->
+    <string name="login_failed">Login failed. Check credentials.</string>
+    <string name="registration_success">Registration successful</string>
+    <string name="registration_username_exists">Username already exists</string>
+
+    <!-- Validation errors (resolved by Activities from resource IDs) -->
+    <string name="error_username_required">Username is required</string>
+    <string name="error_username_too_short">Username must be at least 3 characters</string>
+    <string name="error_username_too_long">Username must be 30 characters or less</string>
+    <string name="error_password_required">Password is required</string>
+    <string name="error_password_too_short">Password must be at least 6 characters</string>
+    <string name="error_weight_required">Weight value is required</string>
+    <string name="error_weight_invalid">Please enter a valid number</string>
+    <string name="error_weight_out_of_range">Weight must be between 1 and 1500 lbs</string>
+
+    <!-- Goal setting -->
+    <string name="set_goal">Set Goal</string>
+    <string name="set_goal_title">Set Goal Weight</string>
+    <string name="goal_saved">Goal weight updated</string>
+
+    <!-- Operation feedback -->
+    <string name="entry_updated">Entry updated</string>
+
+    <!-- SMS permission screen -->
+    <string name="sms_permission_question">Allow SMS notifications when you reach your goal?</string>
+    <string name="allow">Allow</string>
+    <string name="deny">Deny</string>
+    <string name="notifications_disabled_message">Notifications disabled. You can still use the app.</string>
+    <string name="notifications_disabled_toast">Notifications disabled</string>
+    <string name="permission_already_granted">Permission already granted. You will get notifications.</string>
+    <string name="sms_permission_granted">Permission granted! You will get notifications.</string>
+    <string name="sms_permission_granted_toast">SMS permission granted</string>
+    <string name="sms_permission_denied">Permission denied. No notifications will be sent.</string>
+    <string name="sms_permission_denied_toast">SMS permission denied</string>
+
+    <!-- Trend analysis -->
+    <string name="trend_summary_title">Trend Summary</string>
+    <string name="trend_insufficient_data">Log at least %1$d entries to see your weight trend.</string>
+    <string name="trend_rolling_average">7-Day Average: %.1f lbs</string>
+    <string name="trend_direction">Trend: %1$s</string>
+    <string name="trend_weekly_change">This Week: %1$s%2$.1f lbs (%3$s%4$.1f%%)</string>
+    <string name="trend_losing">Losing</string>
+    <string name="trend_gaining">Gaining</string>
+    <string name="trend_stable">Stable</string>
+    <string name="trend_unknown">Not enough data</string>
+</resources>

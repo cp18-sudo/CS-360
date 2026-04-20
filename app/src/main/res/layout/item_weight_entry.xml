@@ -1,0 +1,56 @@
+<!-- Layout for each row in the weight entry RecyclerView.
+     Enhancement 1: Added an Edit button alongside the existing Delete button
+     to support the update operation that was missing from the original app. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="6dp"
+    android:background="@drawable/weight_row_background"
+    android:gravity="center_vertical"
+    android:minHeight="60dp"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/date_label"
+        android:textColor="@color/text_primary"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/weightText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/weight_label"
+        android:textColor="@color/text_primary"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <!-- Edit button: new in Enhancement 1. Lets users update an existing
+         entry instead of having to delete and re-add it. -->
+    <Button
+        android:id="@+id/editButton"
+        android:layout_width="76dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:background="@drawable/secondary_button_background"
+        android:minHeight="40dp"
+        android:text="@string/edit"
+        android:textColor="@color/primary_green"
+        tools:ignore="ButtonStyle" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="76dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/secondary_button_background"
+        android:minHeight="40dp"
+        android:text="@string/delete"
+        android:textColor="@color/danger_red"
+        tools:ignore="ButtonStyle" />
+</LinearLayout>

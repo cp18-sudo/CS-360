@@ -267,7 +267,7 @@ public class TrendCalculatorTest {
 
     @Test
     public void trendFromAverages_downwardSlope_returnsLosing() {
-        // 8 entries (< 14), steadily dropping — uses average-based trend
+        // 8 entries (< 14), steadily dropping, so it uses average-based trend.
         List<WeightEntry> entries = buildEntries(185, 184, 183, 182, 181, 180, 179, 178);
         WeightTrendResult result = calculator.analyze(entries, Double.NaN);
 

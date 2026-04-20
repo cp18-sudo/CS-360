@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Weight Tracker</string>
+    <string name="app_name">Weight Tracker 2</string>
 
     <!-- Login screen -->
     <string name="username">Username</string>

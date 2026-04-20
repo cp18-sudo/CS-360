@@ -71,7 +71,7 @@ public class TrendCalculator {
         List<String> dates = new ArrayList<>(sortedWeights.keySet());
         List<Double> weights = new ArrayList<>(sortedWeights.values());
 
-        // Step 2: Sliding window rolling averages — O(n).
+        // Step 2: Sliding window rolling averages, O(n).
         List<RollingAverage> rollingAverages =
                 computeRollingAverages(dates, weights);
 
